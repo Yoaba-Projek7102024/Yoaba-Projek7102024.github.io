@@ -1,0 +1,227 @@
+/* Dasar website */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #c01010;
+  color: #000;
+}
+
+/* Navigasi */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #fff;
+}
+
+.logo {
+  color: #e0057e;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav a {
+  color: #e0057e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+/* Halaman utama */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 10%;
+}
+
+.hero-text {
+  max-width: 700px;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  border: 4px solid #fff;
+}
+
+.hero h1 {
+  font-size: 53px;
+  color: #faf5f5;
+  margin-bottom: 10px;
+}
+
+.hero h3 {
+  margin: 10px 0;
+  color: #fff;
+}
+
+.hero p {
+  line-height: 1.7;
+  margin-top: 15px;
+  color: #fff;
+}
+
+/* Tombol */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #d80447;
+}
+
+/* Posisi konten */
+.section {
+  padding: 90px 10%;
+  text-align: center;
+}
+
+/* Bagian Tentang Saya */
+#about {
+  border: 2px solid #fafafa;
+  border-radius: 15px;
+  margin: 30px 10%;
+  padding: 50px 30px;
+  background: transparent;
+}
+
+#about h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+#about p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #fbf8f8;
+}
+
+section h2 {
+  font-size: 30px;
+  color: #fffcfc;
+  margin-bottom: 20px;
+}
+
+section > p {
+  max-width: 700px;
+  margin: 0 auto 10px;
+  line-height: 1.7;
+}
+
+/* Skill dan proyek */
+.projects,
+.skill {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #e8e6e6;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #ff0000;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #020202;
+}
+
+.card p {
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #111c33;
+  color: #cbd5e1;
+}
+
+/* Tampilan HP dan tablet */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 60px 7%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero h3 {
+    font-size: 18px;
+  }
+
+  .section {
+    padding: 60px 7%;
+  }
+
+  .projects,
+  .skill {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tampilan HP kecil */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .projects,
+  .skill {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+}
